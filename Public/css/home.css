@@ -1,0 +1,284 @@
+@font-face {
+    font-family: NotoSans-Bold;
+    src: url('../Assets/Fonts/NotoSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url('../Assets/Fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+    font-family: NunitoSans-Bold;
+    src: url('../Assets/Fonts/NunitoSans_10pt-Medium.ttf');
+}
+
+body {
+    background-color: black;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: NotoSans-Bold;
+}
+
+button:focus {
+    outline: none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    /* border: 1px solid white; */
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    margin-top: 20px;
+    padding: 25px;
+    /* border: 1px solid white; */
+}
+
+.title p {
+    margin-top: 4rem;
+    font-size: 2.3rem;
+}
+
+.settings {
+    position: absolute;
+    right: 0;
+    margin-right: 15px;
+    margin-top: 20px;
+    height: 50px;
+    width: 60px;
+}
+
+.settingsBtn {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.settingsBtn img {
+    width: 90%;
+    height: 90%;
+    filter: invert();
+    transition: filter 0.2s ease-in-out;
+}
+
+.settingsBtn:hover {
+    background-color: #caf979;
+}
+
+.settingsBtn:hover img {
+    filter: none;
+}
+
+.settingsBtn:active {
+    background-color: transparent;
+    border-color: #fff;
+    transition: none;
+}
+
+.settingsBtn:active img {
+    filter: invert();
+    transition: none;
+}
+
+.contents {
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white; */
+    margin-left: -10px;
+    /* margin-top: 1rem; */
+    font-size: 1.4rem;
+}
+
+.recents {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid white; */
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 300px;
+    padding-bottom: 25px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* .recents div {
+    height: 100%;
+    width: 200px;
+    margin-right: 20px;
+} */
+
+.recents:first-child {
+    margin-right: 0px;
+}
+
+.recent_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recent_div img {
+    height: 225px;
+    width: 165px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.recent_div:hover img {
+    transform: scale(1.01);
+    /* margin-bottom: 5px; this mf caused the text moving up on hover*/
+    border-radius: 0px;
+}
+
+.latest {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid white; */
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 300px;
+    padding-bottom: 25px;
+    /* margin-bottom: 50px; */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.latest div {
+    height: 100%;
+    width: 200px;
+    margin-right: 20px;
+}
+
+.latest:first-child {
+    margin-right: 0px;
+}
+
+.latest_div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latest_div img {
+    height: 225px;
+    width: 165px;
+    margin: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.latest_div:hover img {
+    transform: scale(1.01);
+    /* margin-bottom: 5px; */
+    border-radius: 0px;
+}
+
+.anime_title {
+    text-align: center;
+    transition: color 0.1s ease-in-out;
+    width: 180px;
+    height: 54px;
+    margin-top: -2px;
+    font-size: 1.2rem;
+}
+
+.recent_div:hover p.anime_title {
+    color: #caf979;
+}
+
+.latest_div:hover p.anime_title {
+    color: #caf979;
+}
+
+.no_act {
+    color: rgba(92, 92, 92, 0.644);
+    margin-left: 7rem;
+    font-size: 2rem;
+    font-family: Poppins-Bold;
+    margin-top: 7rem;
+}
+
+.buttons {
+    /* margin-left: 3rem;
+    margin-bottom: 2rem */
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+.searchButton {
+    background-color: black;
+    color: white;
+    /* border: 1px solid white; */
+    border: none;
+    border-radius: 15px;
+    height: 50px;
+    width: 60px;
+    font-size: 1.6rem;
+    font-family: Poppins-Bold;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.searchButton img {
+    margin-top: 7px;
+    height: 2rem;
+    width: 2rem;
+    filter: invert();
+    transition: filter 0.3s ease-in-out;
+}
+
+.searchButton:hover {
+    background-color: #caf979;
+    color: black;
+}
+
+.searchButton:hover img {
+    filter: none;
+}
+
+.searchButton:focus {
+    outline: none;
+}
+
+.searchButton:active {
+    background-color: black;
+    color: #caf979;
+    border: 1px solid #caf979;
+    transition: none;
+}
+
+.searchButton:active img {
+    filter: invert();
+}
+
+.offline {
+    margin-top: 5rem;
+    width: 100%;
+    height: 100%;
+    font-size: 2.5rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: NunitoSans-Bold;
+    font-weight: 600;
+    flex-direction: column;
+}
+
+.offline a {
+    color: #caf979;
+}

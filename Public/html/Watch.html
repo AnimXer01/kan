@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <title>Anime Stream</title> -->
+        <link rel="stylesheet" href="../css/commons.css" />
+        <link rel="stylesheet" href="../css/watch.css" />
+        <link rel="stylesheet" href="../css/loader.css" />
+        <script>
+            require('../../dist/Render/common.js');
+        </script>
+    </head>
+    <body draggable="false">
+        <div class="main" id="main">
+            <div class="back">
+                <button class="backBtn" id="backBtn">
+                    <img draggable="false" src="../Assets/Icons/arrow.png" />
+                </button>
+            </div>
+            <div class="download">
+                <button id="downloadBtn" class="downloadBtn">
+                    <img draggable="false" src="../Assets/Icons/download.png" />
+                </button>
+            </div>
+            <div class="nav"><div class="playerTitle" id="playerTitle"></div></div>
+            <div class="overlay" id="overlay">
+                <div class="box">
+                    <div class="servers">
+                        <div class="gogo" id="gogo">Gogoanime</div>
+                        <div class="pahe" id="pahe">Animepahe</div>
+                        <div class="close" id="close">CLOSE</div>
+                    </div>
+                    <div class="stream loading" id="stream">
+                        <div class="errorScreen" id="errorScreen">
+                            <div>💔</div>
+                            <div>errors!</div>
+                            <div>maybe try another server.</div>
+                        </div>
+                        <div class="streamsLoader" id="streamLoader">
+                            <div class="lds-ellipsis">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
+                            <div class="loadText">getting streams</div>
+                        </div>
+                        <div class="subStream" id="subStream"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="container" id="container">
+                <div class="playerContainer">
+                    <!-- <div class="playerTitle" id="playerTitle">
+                    </div> -->
+                    <div class="playerContainer2">
+                        <div class="player">
+                            <div class="videoLoaderContainer" id="videoLoaderContainer">
+                                <div class="videoLoader"></div>
+                            </div>
+                            <video class="videoPlayer" id="videoPlayer">na na</video>
+                        </div>
+                        <div class="controlContainer">
+                            <div class="controls" id="controls">
+                                <div class="timeDiv">
+                                    &nbsp;&nbsp;
+                                    <div class="current" id="current">00:00</div>
+                                    &nbsp;/&nbsp;
+                                    <div class="total" id="total">00:00</div>
+                                </div>
+                                <div id="watch_progress">
+                                    <div id="progressed"></div>
+                                    <div id="point"></div>
+                                </div>
+                                <div class="mediaButtons">
+                                    <button class="play_pause" id="playPause">
+                                        <img
+                                            id="playPauseImg"
+                                            src="../Assets/Icons/play.png"
+                                            draggable="false"
+                                        />
+                                    </button>
+                                    <!-- TODO: ADD A F- VOLUME CONTROLLER -->
+                                    <button class="fullScreen" id="fullScreen">
+                                        <img
+                                            id="fsImg"
+                                            draggable="false"
+                                            src="../Assets/Icons/full-screen.png"
+                                        />
+                                    </button>
+                                    <button class="widescreen" id="widescreen">
+                                        <img
+                                            id="wideimg"
+                                            draggable="false"
+                                            src="../Assets/Icons/widescreen.png"
+                                        />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sourcesContainer">
+                    <div class="sources">
+                        <button class="previousEp" id="previousEp">
+                            <img draggable="false" src="../Assets/Icons/back.png" />
+                        </button>
+                        <button class="serversBtn" id="serversBtn">server</button>
+                        <button class="nextEp" id="nextEp">
+                            <img draggable="false" src="../Assets/Icons/back.png" />
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            require('../../dist/Render/renderWatch.js');
+        </script>
+    </body>
+</html>

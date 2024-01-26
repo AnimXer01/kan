@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <title>Anime stream</title> -->
+        <link rel="stylesheet" href="../css/home.css" />
+        <link rel="stylesheet" href="../css/commons.css" />
+        <script>
+            require('../../dist/Render/common.js');
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="nav">
+                <div class="title">
+                    <p>Anime Stream</p>
+                </div>
+            </div>
+            <div class="buttons">
+                <button class="searchButton" id="navigate_search">
+                    <img src="../Assets/Icons/search-interface-symbol.png" />
+                </button>
+            </div>
+            <div class="settings">
+                <button class="settingsBtn" id="settingsBtn">
+                    <img src="../Assets/Icons/setting.png" />
+                </button>
+                <!-- <button id="downloads">d</button> -->
+            </div>
+            <div class="container" id="container">
+                <div class="offline" id="offline">
+                    <div>💔</div>
+                    <div>It seems you're currently offline.</div>
+                    <div>Please check your internet connection and try again</div>
+                    <a href="./Home.html">reload</a>
+                </div>
+                <div class="contents" id="contents">
+                    <p>Continue from where you left off</p>
+                    <div class="recents" id="recents">
+                        <!-- <p class="no_act">No recent activity</p> -->
+                    </div>
+                    <p>Latest releases</p>
+                    <div class="latest" id="latest"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            require('../../dist/Render/renderHome.js');
+        </script>
+    </body>
+</html>
